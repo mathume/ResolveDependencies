@@ -1,0 +1,1 @@
+Sample code of how to load into new AppDomain resolving dependencies.

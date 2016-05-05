@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadAssemblyIntoDifferentAppDomain", "LoadAssemblyIntoDifferentAppDomain\LoadAssemblyIntoDifferentAppDomain.csproj", "{6F9D6B7A-D631-43D9-A660-D98213108EFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyWithDependency", "AssemblyWithDependency\AssemblyWithDependency.csproj", "{62810290-5868-4FC4-AA12-98ADE806A773}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependency", "Dependency\Dependency.csproj", "{CED8F974-0465-44C4-BC2A-8D86BA3DE147}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F9D6B7A-D631-43D9-A660-D98213108EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F9D6B7A-D631-43D9-A660-D98213108EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F9D6B7A-D631-43D9-A660-D98213108EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F9D6B7A-D631-43D9-A660-D98213108EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62810290-5868-4FC4-AA12-98ADE806A773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62810290-5868-4FC4-AA12-98ADE806A773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62810290-5868-4FC4-AA12-98ADE806A773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62810290-5868-4FC4-AA12-98ADE806A773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED8F974-0465-44C4-BC2A-8D86BA3DE147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED8F974-0465-44C4-BC2A-8D86BA3DE147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED8F974-0465-44C4-BC2A-8D86BA3DE147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED8F974-0465-44C4-BC2A-8D86BA3DE147}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
