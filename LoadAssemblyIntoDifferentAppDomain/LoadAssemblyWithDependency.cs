@@ -10,8 +10,7 @@ using Dependency;
 namespace LoadAssemblyIntoDifferentAppDomain
 {
     [TestFixture]
-    [Serializable]
-    public class LoadAssemblyWithDependency : MarshalByRefObject
+    public class LoadAssemblyWithDependency
     {
         private const string assemblyPath = "../../AssemblyWithDependency/bin/AssemblyWithDependency.dll";
         private List<string> foundClassNames;
