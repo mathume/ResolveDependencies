@@ -26,14 +26,14 @@ namespace LoadAssemblyIntoDifferentAppDomain
 
         private static string fileName(string p)
         {
-            if (p.EndsWith(".dll"))
-            {
-                return p.Replace("\\\\", "\\");
-            }
-            else
-            {
+            //if (p.EndsWith(".dll"))
+            //{
+            //    return Path.GetFileName(p);
+            //}
+            //else
+            //{
                 return Path.Combine(DirectoryName, p.Split(',')[0] + ".dll");
-            }
+            //}
         }
     }
 }
