@@ -17,23 +17,16 @@ namespace LoadAssemblyIntoDifferentAppDomain
             Assembly ass = null;
             try
             {
-                ass = Assembly.LoadFile(fileName(args.Name));
+                ass = Assembly.LoadFile(fileNameFromAssemblyName(args.Name));
             }
             catch { }
 
             return ass;
         }
 
-        private static string fileName(string p)
+        private static string fileNameFromAssemblyName(string p)
         {
-            //if (p.EndsWith(".dll"))
-            //{
-            //    return Path.GetFileName(p);
-            //}
-            //else
-            //{
-                return Path.Combine(DirectoryName, p.Split(',')[0] + ".dll");
-            //}
+            return Path.Combine(DirectoryName, p.Split(',')[0] + ".dll");
         }
     }
 }
