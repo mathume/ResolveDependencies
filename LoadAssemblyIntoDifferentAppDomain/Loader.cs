@@ -10,7 +10,7 @@ namespace LoadAssemblyIntoDifferentAppDomain
     [Serializable]
     class Loader : MarshalByRefObject
     {
-        internal static string DirectoryName;
+        internal static string LoadFromDirectoryName;
 
         internal static Assembly LoadDependency(object sender, ResolveEventArgs args)
         {
@@ -26,7 +26,7 @@ namespace LoadAssemblyIntoDifferentAppDomain
 
         private static string fileNameFromAssemblyName(string p)
         {
-            return Path.Combine(DirectoryName, p.Split(',')[0] + ".dll");
+            return Path.Combine(LoadFromDirectoryName, p.Split(',')[0] + ".dll");
         }
     }
 }
