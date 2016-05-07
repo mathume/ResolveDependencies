@@ -17,7 +17,6 @@ namespace LoadAssemblyIntoDifferentAppDomain
         private const string assemblyPath = "../../AssemblyWithDependency/bin/AssemblyWithDependency.dll";
         private AppDomain tempDomain;
         private FileInfo fileInfo;
-        private Assembly ass;
         private string handlerDllPath;
         private AppDomain testDomain;
 
@@ -65,13 +64,12 @@ namespace LoadAssemblyIntoDifferentAppDomain
 
         private List<string> GetSubclassNames()
         {
-            return (List<string>)this.testDomain.GetData("subclassNames");
+            return AssemblyHelper.GetSubclassNames(this.testDomain);
         }
 
         private void SetData()
         {
-            this.testDomain.SetData("assemblyName", AssemblyName.GetAssemblyName(this.fileInfo.FullName));
-            this.testDomain.SetData("loadFromDirectoryName", this.fileInfo.DirectoryName);
+            AssemblyHelper.SetData(this.testDomain, this.fileInfo);
         }
 
         [Test, Explicit]
@@ -94,21 +92,12 @@ namespace LoadAssemblyIntoDifferentAppDomain
 
         int NumberOfLoadedAssembliesInTestDomain()
         {
-            return (int)this.testDomain.GetData("numberOfLoadedAssemblies");
+            return AssemblyHelper.NumberOfLoadedAssembliesInTestDomain(this.testDomain);
         }
 
         public static void SetSubclassNames()
         {
-            Loader.LoadFromDirectoryName = (string)AppDomain.CurrentDomain.GetData("loadFromDirectoryName");
-            AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(Loader.LoadDependency);
-            AppDomain.CurrentDomain.TypeResolve += new ResolveEventHandler(Loader.LoadDependency);
-        
-        
-            var ass = AppDomain.CurrentDomain.Load(((AssemblyName)AppDomain.CurrentDomain.GetData("assemblyName")).FullName);
-            var subclasses = ass.GetTypes().Where(
-                t => t.IsClass && typeof(Interface).IsAssignableFrom(t)).Select(t => t.Name).ToList();
-            AppDomain.CurrentDomain.SetData("subclassNames", subclasses);
-            AppDomain.CurrentDomain.SetData("numberOfLoadedAssemblies", AppDomain.CurrentDomain.GetAssemblies().Count());
+            AssemblyHelper.SetSubclassNames();
         }
 
         private void InitTemporaryDomain()

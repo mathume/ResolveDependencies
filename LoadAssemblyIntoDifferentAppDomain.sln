@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyWithDependency", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependency", "Dependency\Dependency.csproj", "{CED8F974-0465-44C4-BC2A-8D86BA3DE147}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadIntoDifferentDomainInSameDirectory", "LoadIntoDifferentDomainInSameDirectory\LoadIntoDifferentDomainInSameDirectory.csproj", "{E1CEAD7E-DEBE-4632-A53A-20547C92F034}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{CED8F974-0465-44C4-BC2A-8D86BA3DE147}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CED8F974-0465-44C4-BC2A-8D86BA3DE147}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CED8F974-0465-44C4-BC2A-8D86BA3DE147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1CEAD7E-DEBE-4632-A53A-20547C92F034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1CEAD7E-DEBE-4632-A53A-20547C92F034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1CEAD7E-DEBE-4632-A53A-20547C92F034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1CEAD7E-DEBE-4632-A53A-20547C92F034}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
